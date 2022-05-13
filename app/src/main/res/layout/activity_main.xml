@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/primary_color">
+
+        <ImageView
+            android:id="@+id/icon_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/ic_coin" />
+
+        <TextView
+            android:id="@+id/text_go_finances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/icon_coin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="goFinances"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_go_finances"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/title_main_activity"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/registre_se_main_activity"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_title_login"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_register"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/sub_title_main_activity"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="@color/secondary_color">
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:hint="@string/login_main_activity"
+            android:paddingStart="12dp"
+            android:background="@drawable/bg_edit_text_customized" />
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="3dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/input_email"
+            android:background="@color/gray" />
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/input_email"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/hint_password_main_activity"
+            android:paddingStart="12dp"
+            android:background="@drawable/bg_edit_text_customized" />
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="3dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/input_password"
+            android:background="@color/gray" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/primary_color"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/button_entrar_main_activity"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Go Finances</string>
+    <string name="title_main_activity">Controle suas finanças de forma muito simples</string>
+    <string name="registre_se_main_activity">Registre-se</string>
+    <string name="sub_title_main_activity">Preencha com seu email e senha abaixo</string>
+    <string name="login_main_activity">Login</string>
+    <string name="hint_password_main_activity">Password</string>
+    <string name="button_entrar_main_activity">Entrar</string>
+</resources>
