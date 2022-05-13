@@ -1,4 +1,4 @@
-package com.example.gofinances.service.local
+package com.example.gofinances.service.local.model
 
 import com.example.gofinances.service.local.entity.LoginEntity
 
