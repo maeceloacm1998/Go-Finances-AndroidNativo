@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_card"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:elevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/text_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entradas"
+            android:textColor="@color/title_color"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_arrow_up"
+            />
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_type"
+            android:layout_marginTop="70dp"
+            android:text="R$ 17.400,00"
+            android:textColor="@color/title_color"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/text_last_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_price"
+            android:text="Última entrada dia 13 de abril"
+            android:textColor="@color/text_gray_color"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

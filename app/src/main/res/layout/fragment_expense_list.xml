@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/expense_list_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/container_header"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:background="@color/primary_color"
+            android:padding="25dp">
+
+            <ImageView
+                android:id="@+id/image_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/perfil" />
+
+            <TextView
+                android:id="@+id/text_hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/image_profile"
+                android:text="Olá,"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text_name_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_hello"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/image_profile"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Rodrigo"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/primary_color"
+                android:src="@drawable/ic_power" />
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rv_card_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/text_name_user"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_card_horizontal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:background="@color/background_color"
+            >
+
+            <TextView
+                android:id="@+id/text_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/poppins"
+                android:text="Listagem"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rv_list_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/text_list"
+                tools:listitem="@layout/item_card_vertical" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

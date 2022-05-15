@@ -5,6 +5,7 @@
     <color name="success_color">#12A454</color>
     <color name="warn_color">#E83F5B</color>
     <color name="title_color">#363F5F</color>
+    <color name="text_gray_color">#969CB2</color>
     <color name="background_color">#F0F2F5</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
