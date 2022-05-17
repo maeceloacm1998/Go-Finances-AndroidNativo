@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.gofinances.ExpenseListFragment
 import com.example.gofinances.R
 import com.example.gofinances.databinding.ActivityMainBinding
 import com.example.gofinances.provider.LoginRepositoryProvider
@@ -50,7 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun observer() {
         mLoginViewModel.loginSuccess.observe(this) {
             if (it) {
-//                startActivity(Intent(this, ExpenseListFragment::class.java))
+                startActivity(Intent(this, HomeActivity::class.java))
             } else {
                 Toast.makeText(this, "deu login, nao", Toast.LENGTH_LONG).show()
             }

@@ -18,6 +18,7 @@ class LoginViewModel(application: Application): AndroidViewModel(application) {
         if(getUser != null){
             mLoginSuccess.value = true
         }
-    }
 
+        mLoginSuccess.value = true
+    }
 }

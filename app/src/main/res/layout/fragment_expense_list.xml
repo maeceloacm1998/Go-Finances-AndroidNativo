@@ -4,7 +4,7 @@
     android:id="@+id/expense_list_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExpenseListFragment">
+    tools:context=".view.fragments.ExpenseListFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
