@@ -15,5 +15,4 @@ class ExpenseListFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_expense_list, container, false)
     }
-
 }

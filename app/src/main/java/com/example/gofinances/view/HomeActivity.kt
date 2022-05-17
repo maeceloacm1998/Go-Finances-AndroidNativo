@@ -67,6 +67,12 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
                         R.color.secondary_color
                     )
                 )
+                binding.iconList.setColorFilter(
+                    ContextCompat.getColor(
+                        applicationContext,
+                        R.color.secondary_color
+                    )
+                )
             }
             "menu_signup" -> {
                 binding.textIconSignup.setTextColor(
@@ -75,9 +81,21 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
                         R.color.secondary_color
                     )
                 )
+                binding.iconSignup.setColorFilter(
+                    ContextCompat.getColor(
+                        applicationContext,
+                        R.color.secondary_color
+                    )
+                )
             }
             "menu_resume" -> {
                 binding.textIconResume.setTextColor(
+                    ContextCompat.getColor(
+                        applicationContext,
+                        R.color.secondary_color
+                    )
+                )
+                binding.iconResume.setColorFilter(
                     ContextCompat.getColor(
                         applicationContext,
                         R.color.secondary_color
@@ -94,6 +112,12 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
                 R.color.title_color
             )
         )
+        binding.iconList.setColorFilter(
+            ContextCompat.getColor(
+                applicationContext,
+                R.color.title_color
+            )
+        )
 
         binding.textIconSignup.setTextColor(
             ContextCompat.getColor(
@@ -101,8 +125,20 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
                 R.color.title_color
             )
         )
+        binding.iconSignup.setColorFilter(
+            ContextCompat.getColor(
+                applicationContext,
+                R.color.title_color
+            )
+        )
 
         binding.textIconResume.setTextColor(
+            ContextCompat.getColor(
+                applicationContext,
+                R.color.title_color
+            )
+        )
+        binding.iconResume.setColorFilter(
             ContextCompat.getColor(
                 applicationContext,
                 R.color.title_color
