@@ -6,4 +6,6 @@
     <string name="hint_login_main_activity">Login</string>
     <string name="hint_password_main_activity">Password</string>
     <string name="button_entrar_main_activity">Entrar</string>
+    <string name="input_name">Nome</string>
+    <string name="input_price">Price</string>
 </resources>

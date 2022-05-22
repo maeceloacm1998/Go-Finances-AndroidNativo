@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2985" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_button_desabled.xml" value="0.254" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_button_normal.xml" value="0.254" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_edit_text_customized.xml" value="0.2985" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_progress_background.xml" value="0.254" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_arrow_down.xml" value="0.121" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_arrow_up.xml" value="0.121" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_coin.xml" value="0.1235" />
@@ -14,8 +17,11 @@
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/activity_home.xml" value="0.152" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/fragment_expense_list.xml" value="0.264" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/fragment_register_expense.xml" value="0.33" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/item_card_horizontal.xml" value="0.33" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/item_card_vertical.xml" value="0.25" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/item_progress_button.xml" value="0.25" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/item_text_input_custom.xml" value="0.2477355072463768" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/menu/button_navigation_menu.xml" value="0.2" />
       </map>
     </option>

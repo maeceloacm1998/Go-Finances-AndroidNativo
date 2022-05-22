@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressButtom">
+        <attr name="progress_button_title" format="string" />
+        <attr name="progress_button_loading_title" format="string" />
+    </declare-styleable>
+    <declare-styleable name="TextInputCustom">
+        <attr name="text_input_custom_hint" format="string" />
+    </declare-styleable>
+</resources>

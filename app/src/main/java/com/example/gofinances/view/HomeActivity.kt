@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment
 import com.example.gofinances.R
 import com.example.gofinances.databinding.ActivityHomeBinding
 import com.example.gofinances.view.fragments.ExpenseListFragment
+import com.example.gofinances.view.fragments.RegisterExpenseFragment
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityHomeBinding
     private val expenseListFragment = ExpenseListFragment()
+    private val registerItemFragment = RegisterExpenseFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
                 setMenuItemColor("menu_list")
             }
             R.id.menu_signup -> {
+                setFragmentView(registerItemFragment)
                 setMenuItemColor("menu_signup")
             }
             R.id.menu_resume -> {
