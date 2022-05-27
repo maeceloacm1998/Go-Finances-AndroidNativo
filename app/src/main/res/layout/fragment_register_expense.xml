@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/input_name"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="16dp"
                 app:text_input_custom_hint="@string/input_price" />
 
             <com.example.gofinances.ui_components.ButtonSelectIncomeAndOutcome

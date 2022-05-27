@@ -19,8 +19,18 @@ class RegisterExpenseFragment : Fragment() {
         binding.buttonIncome.setOnClickListener {
             if (!binding.buttonIncome.STATE_CLICK) {
                 binding.buttonIncome.setClickState()
+                binding.buttonOutcome.setNormalState()
             } else {
                 binding.buttonIncome.setNormalState()
+            }
+        }
+
+        binding.buttonOutcome.setOnClickListener {
+            if (!binding.buttonOutcome.STATE_CLICK) {
+                binding.buttonOutcome.setClickState()
+                binding.buttonIncome.setNormalState()
+            } else {
+                binding.buttonOutcome.setNormalState()
             }
         }
 
