@@ -30,9 +30,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingHorizontal="20dp"
             android:layout_below="@+id/container_header_register"
-            android:background="@color/background_color">
+            android:background="@color/background_color"
+            android:paddingHorizontal="20dp">
 
             <com.example.gofinances.ui_components.TextInputCustom
                 android:id="@+id/input_name"
@@ -45,10 +45,26 @@
                 android:id="@+id/input_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_below="@+id/input_name"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
                 app:text_input_custom_hint="@string/input_price" />
 
+            <com.example.gofinances.ui_components.ButtonSelectIncomeAndOutcome
+                android:id="@+id/button_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:isIncome="true"
+                android:layout_below="@+id/input_price" />
+
+            <com.example.gofinances.ui_components.ButtonSelectIncomeAndOutcome
+                android:id="@+id/button_outcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:isOutcome="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/button_income"
+                android:layout_below="@+id/input_price" />
 
         </RelativeLayout>
     </RelativeLayout>

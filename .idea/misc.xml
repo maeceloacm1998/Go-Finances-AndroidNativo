@@ -4,12 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2985" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_border_gray.xml" value="0.333" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_border_green.xml" value="0.333" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_border_red.xml" value="0.333" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_button_desabled.xml" value="0.254" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_button_normal.xml" value="0.254" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_edit_text_customized.xml" value="0.2985" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/bg_progress_background.xml" value="0.254" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_arrow_down.xml" value="0.121" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_arrow_down_30.xml" value="0.333" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_arrow_up.xml" value="0.121" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_arrow_up_25.xml" value="0.333" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_arrow_up_30.xml" value="0.333" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_coin.xml" value="0.1235" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_dolar.xml" value="0.2985" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2985" />
@@ -18,6 +24,7 @@
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/fragment_expense_list.xml" value="0.264" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/fragment_register_expense.xml" value="0.33" />
+        <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/item_button_select_income_and_outcome.xml" value="0.3625" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/item_card_horizontal.xml" value="0.33" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/item_card_vertical.xml" value="0.25" />
         <entry key="..\:/Users/marce/AndroidStudioProjects/GoFinances/app/src/main/res/layout/item_progress_button.xml" value="0.25" />

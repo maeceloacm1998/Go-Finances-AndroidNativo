@@ -1,4 +1,4 @@
-package com.example.gofinances.view
+package com.example.gofinances.ui_components
 
 import android.content.Context
 import android.util.AttributeSet
@@ -13,7 +13,6 @@ class ProgressButtom @JvmOverloads constructor(
     attr: AttributeSet?,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attr, defStyleAttr) {
-    // Atributor a serem inseridos
     private var title: String? = null
     private var loadingTitle: String? = null
 

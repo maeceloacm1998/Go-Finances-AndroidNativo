@@ -1,20 +1,29 @@
 package com.example.gofinances.view.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.gofinances.R
+import androidx.fragment.app.Fragment
+import com.example.gofinances.databinding.FragmentRegisterExpenseBinding
 
 class RegisterExpenseFragment : Fragment() {
+    private lateinit var binding: FragmentRegisterExpenseBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register_expense, container, false)
-    }
+    ): View {
+        binding = FragmentRegisterExpenseBinding.inflate(inflater, container, false)
 
+        binding.buttonIncome.setOnClickListener {
+            if (!binding.buttonIncome.STATE_CLICK) {
+                binding.buttonIncome.setClickState()
+            } else {
+                binding.buttonIncome.setNormalState()
+            }
+        }
+
+        return binding.root
+    }
 }

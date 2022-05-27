@@ -7,4 +7,8 @@
     <declare-styleable name="TextInputCustom">
         <attr name="text_input_custom_hint" format="string" />
     </declare-styleable>
+    <declare-styleable name="ButtonSelectIncomeAndOutcome">
+        <attr name="isIncome" format="boolean" />
+        <attr name="isOutcome" format="boolean" />
+    </declare-styleable>
 </resources>
