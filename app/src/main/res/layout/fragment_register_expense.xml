@@ -54,17 +54,54 @@
                 android:id="@+id/button_income"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:isIncome="true"
-                android:layout_below="@+id/input_price" />
+                android:layout_below="@+id/input_price"
+                app:isIncome="true" />
 
             <com.example.gofinances.ui_components.ButtonSelectIncomeAndOutcome
                 android:id="@+id/button_outcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:isOutcome="true"
-                android:layout_marginStart="10dp"
+                android:layout_below="@+id/input_price"
+                android:layout_marginStart="5dp"
                 android:layout_toRightOf="@id/button_income"
-                android:layout_below="@+id/input_price" />
+                app:isOutcome="true" />
+
+            <RelativeLayout
+                android:id="@+id/button_category"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/button_outcome"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:paddingHorizontal="15dp">
+
+                <TextView
+                    android:id="@+id/text_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Categorias"
+                    android:textColor="@color/text_gray_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_down_24" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_button_submit"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Enviar" />
 
         </RelativeLayout>
     </RelativeLayout>
