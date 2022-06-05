@@ -2,6 +2,7 @@
 <resources>
     <color name="primary_color">#5636D3</color>
     <color name="secondary_color">#FF872C</color>
+    <color name="secondary_color_light">#6FFF872C</color>
     <color name="success_color">#12A454</color>
     <color name="success_color_light">#7712A454</color>
     <color name="warn_color">#E83F5B</color>

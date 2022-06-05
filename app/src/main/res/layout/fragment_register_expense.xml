@@ -6,103 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".view.fragments.RegisterExpenseFragment">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
 
-        <RelativeLayout
-            android:id="@+id/container_header_register"
+        <View
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@color/primary_color">
+            android:background="@color/primary_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/poppins"
-                android:text="Cadastro"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Cadastro"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/header"
+            app:layout_constraintEnd_toEndOf="@id/header"
+            app:layout_constraintStart_toStartOf="@id/header"
+            app:layout_constraintTop_toTopOf="@id/header" />
 
-        <RelativeLayout
+        <com.example.gofinances.ui_components.TextInputCustom
+            android:id="@+id/input_name"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/container_header_register"
-            android:background="@color/background_color"
-            android:paddingHorizontal="20dp">
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:text_input_custom_hint="@string/input_name" />
 
-            <com.example.gofinances.ui_components.TextInputCustom
-                android:id="@+id/input_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                app:text_input_custom_hint="@string/input_name" />
+        <com.example.gofinances.ui_components.TextInputCustom
+            android:id="@+id/input_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_name"
+            app:text_input_custom_hint="@string/input_price" />
 
-            <com.example.gofinances.ui_components.TextInputCustom
-                android:id="@+id/input_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/input_name"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="16dp"
-                app:text_input_custom_hint="@string/input_price" />
+        <com.example.gofinances.ui_components.ButtonSelectIncomeAndOutcome
+            android:id="@+id/button_income"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            app:isIncome="true"
+            app:layout_constraintEnd_toStartOf="@id/button_outcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_price" />
 
-            <com.example.gofinances.ui_components.ButtonSelectIncomeAndOutcome
-                android:id="@+id/button_income"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/input_price"
-                app:isIncome="true" />
+        <com.example.gofinances.ui_components.ButtonSelectIncomeAndOutcome
+            android:id="@+id/button_outcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:isOutcome="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_income"
+            app:layout_constraintTop_toBottomOf="@id/input_price" />
 
-            <com.example.gofinances.ui_components.ButtonSelectIncomeAndOutcome
-                android:id="@+id/button_outcome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/input_price"
-                android:layout_marginStart="5dp"
-                android:layout_toRightOf="@id/button_income"
-                app:isOutcome="true" />
+        <View
+            android:id="@+id/button_category"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:paddingHorizontal="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_income" />
 
-            <RelativeLayout
-                android:id="@+id/button_category"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@id/button_outcome"
-                android:layout_marginTop="16dp"
-                android:background="@color/white"
-                android:paddingHorizontal="15dp">
+        <TextView
+            android:id="@+id/text_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Categorias"
+            android:textColor="@color/text_gray_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/button_category"
+            app:layout_constraintStart_toStartOf="@id/button_category"
+            app:layout_constraintTop_toTopOf="@id/button_category" />
 
-                <TextView
-                    android:id="@+id/text_category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Categorias"
-                    android:textColor="@color/text_gray_color"
-                    android:textSize="14sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_arrow_down_24"
+            app:layout_constraintBottom_toBottomOf="@id/button_category"
+            app:layout_constraintEnd_toEndOf="@id/button_category"
+            app:layout_constraintTop_toTopOf="@id/button_category" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_arrow_down_24" />
-            </RelativeLayout>
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_button_submit"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <Button
-                android:id="@+id/button_submit"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="24dp"
-                android:background="@drawable/bg_button_submit"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Enviar" />
-
-        </RelativeLayout>
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

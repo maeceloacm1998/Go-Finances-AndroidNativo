@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.EditText
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.gofinances.R
 import com.example.gofinances.databinding.ItemTextInputCustomBinding
@@ -45,5 +46,13 @@ class TextInputCustom @JvmOverloads constructor(
         if (hintResId != 0) {
             hint = context.getString(hintResId)
         }
+    }
+
+    fun setError(value: String) {
+        binding.textInputCustom.error = value
+    }
+
+    fun getEditText(): EditText? {
+        return binding.textInputCustom.editText
     }
 }
