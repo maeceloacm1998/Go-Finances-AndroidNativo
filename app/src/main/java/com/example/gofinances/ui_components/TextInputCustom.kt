@@ -5,15 +5,15 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.EditText
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.gofinances.R
 import com.example.gofinances.databinding.ItemTextInputCustomBinding
+import com.google.android.material.textfield.TextInputLayout
 
 class TextInputCustom @JvmOverloads constructor(
     context: Context,
     attr: AttributeSet?,
     defStyledAttr: Int = 0
-) : ConstraintLayout(context, attr, defStyledAttr) {
+) : TextInputLayout(context, attr, defStyledAttr){
     private var hint: String? = null
 
     private val binding: ItemTextInputCustomBinding = ItemTextInputCustomBinding.inflate(
@@ -52,7 +52,11 @@ class TextInputCustom @JvmOverloads constructor(
         binding.textInputCustom.error = value
     }
 
-    fun getEditText(): EditText? {
+    fun setInputType(value: Int){
+        binding.label.inputType = value
+    }
+
+    override fun getEditText(): EditText? {
         return binding.textInputCustom.editText
     }
 }

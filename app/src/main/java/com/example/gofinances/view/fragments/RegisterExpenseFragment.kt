@@ -28,6 +28,7 @@ class RegisterExpenseFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.inputPrice.setInputType(GoFinancesConstants.InputTypes.NUMBER)
         setServicePreferences(GoFinancesConstants.SharedPreferences.CATEGORY_SELECTED, "")
         setIncomeState()
         loadCategoryItems()

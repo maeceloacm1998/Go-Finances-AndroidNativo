@@ -15,4 +15,11 @@ class GoFinancesConstants {
         const val ERROR_PRICE_VALUE = "Preco é um campo obrigatorio."
         const val ERROR_CATEGORY = "Selecione uma categoria"
     }
+
+    object InputTypes {
+        const val NUMBER = 0x00000002
+        const val PHONE = 0x00000003
+        const val PASSWORD = 0x00000081
+        const val TEXT = 0x00000001
+    }
 }

@@ -10,5 +10,8 @@
     <declare-styleable name="ButtonSelectIncomeAndOutcome">
         <attr name="isIncome" format="boolean" />
         <attr name="isOutcome" format="boolean" />
+        <attr name="inputType">
+            <flag name="number" value="0x00000002" />
+        </attr>
     </declare-styleable>
 </resources>
