@@ -141,11 +141,7 @@ class RegisterExpenseFragment : Fragment(), View.OnClickListener {
     }
 
     private fun onSubmit() {
-        Toast.makeText(
-            context,
-            "sucesso",
-            Toast.LENGTH_LONG
-        ).show()
+
     }
 
     override fun onClick(v: View) {
