@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gofinances.constants.GoFinancesConstants
 import com.example.gofinances.databinding.FragmentExpenseListBinding
 import com.example.gofinances.provider.ExpenseProvider
+import com.example.gofinances.view.controller.ExpenseListHorizontalController
 import com.example.gofinances.view.controller.ExpenseListVerticalController
 import java.text.SimpleDateFormat
 import java.util.*
@@ -18,6 +19,7 @@ import java.util.*
 class ExpenseListFragment : Fragment() {
     private lateinit var binding: FragmentExpenseListBinding
     private val expenseListVerticalController = ExpenseListVerticalController()
+    private val expenseListHorizontalController = ExpenseListHorizontalController()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,9 +34,17 @@ class ExpenseListFragment : Fragment() {
             setController(expenseListVerticalController)
             layoutManager = LinearLayoutManager(context)
         }
+
+        binding.rvCardHorizontal.apply {
+            setController(expenseListHorizontalController)
+            layoutManager = LinearLayoutManager(context)
+        }
+
         context?.let { expenseListVerticalController.setContext(it) }
+        context?.let { expenseListHorizontalController.setContext(it) }
 
         expenseListVerticalController.setData(ExpenseProvider.transaction().getAllExpenseItems())
+        expenseListHorizontalController.setData()
     }
 
     fun formatDate(date: Date): String {
