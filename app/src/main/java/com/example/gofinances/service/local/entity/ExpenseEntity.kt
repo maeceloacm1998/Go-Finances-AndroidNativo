@@ -15,6 +15,7 @@ class ExpenseEntity {
 
     @ColumnInfo(name = "name")
     var name: String = ""
+
     @ColumnInfo(name = "price")
     var price: String = ""
 

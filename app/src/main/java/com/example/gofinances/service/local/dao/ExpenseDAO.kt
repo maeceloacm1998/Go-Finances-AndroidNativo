@@ -13,4 +13,7 @@ interface ExpenseDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun createExpenseItem(expenseItem: ExpenseEntity)
+
+    @Query("SELECT * FROM expense_table WHERE type =:type")
+    fun getSpecificType(type: String): List<ExpenseEntity>
 }

@@ -6,4 +6,6 @@ interface ExpenseRepositoryModel {
     fun getAllExpenseItems(): List<ExpenseEntity>
 
     fun createExpenseItem(expenseItem: ExpenseEntity)
+
+    fun getSpecificType(type:String): List<ExpenseEntity>
 }

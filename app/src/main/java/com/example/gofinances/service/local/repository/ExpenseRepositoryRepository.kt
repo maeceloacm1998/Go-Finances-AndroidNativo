@@ -14,4 +14,8 @@ class ExpenseRepositoryRepository(private val database: ExpenseDataBase): Expens
     override fun createExpenseItem(expenseItem: ExpenseEntity) {
         transaction.createExpenseItem(expenseItem)
     }
+
+    override fun getSpecificType(type: String): List<ExpenseEntity> {
+        return transaction.getSpecificType(type)
+    }
 }
