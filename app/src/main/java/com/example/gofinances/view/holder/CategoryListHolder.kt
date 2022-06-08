@@ -11,6 +11,7 @@ import com.airbnb.epoxy.EpoxyHolder
 import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.example.gofinances.R
+import com.example.gofinances.constants.GoFinancesConstants
 import com.example.gofinances.service.local.ServicePreferences
 import com.google.android.material.internal.ContextUtils.getActivity
 
@@ -24,6 +25,9 @@ abstract class CategoryListHolder : EpoxyModelWithHolder<CategoryListHolder.Cate
     lateinit var icon: Drawable
 
     @EpoxyAttribute
+    var iconValue: Int = 0
+
+    @EpoxyAttribute
     lateinit var backgroundItem: Drawable
 
     @SuppressLint("RestrictedApi")
@@ -34,7 +38,8 @@ abstract class CategoryListHolder : EpoxyModelWithHolder<CategoryListHolder.Cate
         holder.mContainerCategory.setBackgroundDrawable(backgroundItem)
 
         holder.mContainerCategory.setOnClickListener {
-            ServicePreferences(it.context).setStore("item_selected", name)
+            ServicePreferences(it.context).setStore(GoFinancesConstants.SharedPreferences.CATEGORY_SELECTED, name)
+            ServicePreferences(it.context).setStore(GoFinancesConstants.SharedPreferences.ICON_CATEGORY_SELECTED, iconValue.toString())
             it.setBackgroundDrawable(backgroundItem)
             getActivity(it.context)?.onBackPressed()
         }

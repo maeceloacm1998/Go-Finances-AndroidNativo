@@ -13,7 +13,7 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/text_type"
+            android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Desenvolvimento de site"
@@ -24,7 +24,7 @@
             android:id="@+id/text_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text_type"
+            android:layout_below="@+id/text_name"
             android:text="R$ 12.000,00"
             android:textColor="@color/success_color"
             android:textSize="20sp" />
@@ -56,7 +56,6 @@
             android:text="13/04/2020"
             android:textColor="@color/text_gray_color"
             android:textSize="14sp" />
-
 
     </RelativeLayout>
 

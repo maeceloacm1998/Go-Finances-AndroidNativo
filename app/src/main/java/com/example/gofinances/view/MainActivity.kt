@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.gofinances.R
 import com.example.gofinances.databinding.ActivityMainBinding
 import com.example.gofinances.provider.CategoryItemsProvider
+import com.example.gofinances.provider.ExpenseProvider
 import com.example.gofinances.provider.LoginRepositoryProvider
 import com.example.gofinances.viewmodel.LoginViewModel
 
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // Init banco local de login
         LoginRepositoryProvider.initialize(applicationContext)
         CategoryItemsProvider.initialize(applicationContext)
+        ExpenseProvider.initialize(applicationContext)
 
         observer()
         listeners()

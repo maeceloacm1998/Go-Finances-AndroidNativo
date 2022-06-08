@@ -12,11 +12,14 @@ import com.example.gofinances.R
 import com.example.gofinances.constants.GoFinancesConstants
 import com.example.gofinances.databinding.FragmentRegisterExpenseBinding
 import com.example.gofinances.provider.CategoryItemsProvider
+import com.example.gofinances.provider.ExpenseProvider
 import com.example.gofinances.service.local.ServicePreferences
+import com.example.gofinances.service.local.entity.ExpenseEntity
 import com.example.gofinances.view.CategoryActivity
+import java.util.*
 
 class RegisterExpenseFragment : Fragment(), View.OnClickListener {
-    private lateinit var binding: com.example.gofinances.databinding.FragmentRegisterExpenseBinding
+    private lateinit var binding: FragmentRegisterExpenseBinding
     private var categoryActivity = CategoryActivity()
 
     override fun onCreateView(
@@ -28,8 +31,9 @@ class RegisterExpenseFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.inputPrice.setInputType(GoFinancesConstants.InputTypes.NUMBER)
         setServicePreferences(GoFinancesConstants.SharedPreferences.CATEGORY_SELECTED, "")
+        context?.let { ExpenseProvider.initialize(it) }
+        setInputTypes()
         setIncomeState()
         loadCategoryItems()
         listeners()
@@ -50,6 +54,11 @@ class RegisterExpenseFragment : Fragment(), View.OnClickListener {
         binding.buttonSubmit.setOnClickListener(this)
         binding.buttonIncome.setOnClickListener(this)
         binding.buttonOutcome.setOnClickListener(this)
+    }
+
+    private fun setInputTypes() {
+        binding.inputPrice.setInputType(GoFinancesConstants.InputTypes.NUMBER_DECIMAL)
+        binding.inputName.setInputType(GoFinancesConstants.InputTypes.TEXT)
     }
 
     private fun loadCategoryItems() {
@@ -102,10 +111,11 @@ class RegisterExpenseFragment : Fragment(), View.OnClickListener {
     }
 
     private fun handleSubmitButton() {
-        nameValue = binding.inputName.getEditText()?.text.toString()
-        priceValue = binding.inputPrice.getEditText()?.text.toString()
+        nameValue = binding.inputName.editText?.text.toString()
+        priceValue = binding.inputPrice.editText?.text.toString()
         categoryValue =
             context?.let { ServicePreferences(it).getString(GoFinancesConstants.SharedPreferences.CATEGORY_SELECTED) }
+        iconCategoryValue = context?.let { ServicePreferences(it).getString(GoFinancesConstants.SharedPreferences.ICON_CATEGORY_SELECTED).toInt() }!!
 
         val isValidation = validationComponents()
 
@@ -141,7 +151,26 @@ class RegisterExpenseFragment : Fragment(), View.OnClickListener {
     }
 
     private fun onSubmit() {
+        val expenseItem = ExpenseEntity().apply {
+            name = nameValue.toString()
+            category = categoryValue.toString()
+            iconCategory = iconCategoryValue
+            price = priceValue.toString()
+            dtCreated = Calendar.getInstance().timeInMillis
+            type = stateIncomeOrOutcome.toString()
+        }
 
+        ExpenseProvider.transaction().createExpenseItem(expenseItem)
+
+        setFragmentView(ExpenseListFragment())
+    }
+
+    private fun setFragmentView(fragment: Fragment) {
+        activity?.supportFragmentManager
+            ?.beginTransaction()
+            ?.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+            ?.replace(R.id.frame_layout, fragment)
+            ?.commit()
     }
 
     override fun onClick(v: View) {
@@ -163,5 +192,6 @@ class RegisterExpenseFragment : Fragment(), View.OnClickListener {
         var priceValue: String? = null
         var stateIncomeOrOutcome: String? = null
         var categoryValue: String? = null
+        var iconCategoryValue: Int = 0
     }
 }

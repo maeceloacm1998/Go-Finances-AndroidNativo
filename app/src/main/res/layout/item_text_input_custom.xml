@@ -10,6 +10,7 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/label"
         android:layout_width="match_parent"
+        android:inputType="textCapWords"
         android:layout_height="50dp"
         android:background="@drawable/bg_edit_text_customized" />
 </com.google.android.material.textfield.TextInputLayout>

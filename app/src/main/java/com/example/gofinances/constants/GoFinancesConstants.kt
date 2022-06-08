@@ -3,6 +3,7 @@ package com.example.gofinances.constants
 class GoFinancesConstants {
     object SharedPreferences {
         const val CATEGORY_SELECTED = "item_selected"
+        const val ICON_CATEGORY_SELECTED = "icon_item_selected"
     }
 
     object IncomeAndOutcomeValues {
@@ -18,8 +19,14 @@ class GoFinancesConstants {
 
     object InputTypes {
         const val NUMBER = 0x00000002
+        const val NUMBER_DECIMAL = 0x00002002
         const val PHONE = 0x00000003
         const val PASSWORD = 0x00000081
-        const val TEXT = 0x00000001
+        const val TEXT = 0x00002001
     }
+
+    object FormatDate {
+        const val SIMPLE_DATE = "dd/MM/yyyy"
+    }
+
 }

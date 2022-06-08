@@ -8,9 +8,9 @@ import com.example.gofinances.service.local.entity.ExpenseEntity
 
 @Dao
 interface ExpenseDAO {
-    @Query("SELECT * FROM expense")
+    @Query("SELECT * FROM expense_table")
     fun getAllExpenseItems(): List<ExpenseEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun createExpenseItem(categoryItem: ExpenseEntity)
+    fun createExpenseItem(expenseItem: ExpenseEntity)
 }

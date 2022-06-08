@@ -21,6 +21,7 @@ class CategoryListController : EpoxyController() {
                     id(item.id)
                     name(item.name)
                     icon(ContextCompat.getDrawable(context, item.icon))
+                    iconValue(item.icon)
                     backgroundItem(
                         ContextCompat.getDrawable(
                             context,
@@ -33,6 +34,7 @@ class CategoryListController : EpoxyController() {
                     id(item.id)
                     name(item.name)
                     icon(ContextCompat.getDrawable(context, item.icon))
+                    iconValue(item.icon)
                     backgroundItem(
                         ContextCompat.getDrawable(
                             context,

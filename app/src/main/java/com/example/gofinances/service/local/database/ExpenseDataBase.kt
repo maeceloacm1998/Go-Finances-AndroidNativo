@@ -7,8 +7,9 @@ import androidx.room.RoomDatabase
 import com.example.gofinances.service.local.dao.CategoryItemsDAO
 import com.example.gofinances.service.local.dao.ExpenseDAO
 import com.example.gofinances.service.local.entity.CategoryItemsEntity
+import com.example.gofinances.service.local.entity.ExpenseEntity
 
-@Database(entities = [CategoryItemsEntity::class], version = 1)
+@Database(entities = [ExpenseEntity::class], version = 1)
 abstract class ExpenseDataBase: RoomDatabase() {
     abstract fun expenseDAO(): ExpenseDAO
 
@@ -18,7 +19,7 @@ abstract class ExpenseDataBase: RoomDatabase() {
             if (!::INSTANCE.isInitialized) {
                 synchronized(ExpenseDataBase::class.java) {
                     INSTANCE =
-                        Room.databaseBuilder(context, ExpenseDataBase::class.java, "category_database")
+                        Room.databaseBuilder(context, ExpenseDataBase::class.java, "expense_database")
                             .allowMainThreadQueries()
                             .fallbackToDestructiveMigration()
                             .build()
