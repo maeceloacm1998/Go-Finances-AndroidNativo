@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <RelativeLayout
             android:id="@+id/container_header"
             android:layout_width="match_parent"
@@ -68,9 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:padding="20dp"
             android:background="@color/background_color"
-            >
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/text_list"

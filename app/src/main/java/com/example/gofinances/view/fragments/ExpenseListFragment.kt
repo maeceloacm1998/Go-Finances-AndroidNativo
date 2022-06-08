@@ -37,7 +37,7 @@ class ExpenseListFragment : Fragment() {
 
         binding.rvCardHorizontal.apply {
             setController(expenseListHorizontalController)
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
 
         context?.let { expenseListVerticalController.setContext(it) }

@@ -8,4 +8,6 @@
     <string name="button_entrar_main_activity">Entrar</string>
     <string name="input_name">Nome</string>
     <string name="input_price">Price</string>
+    <string name="income_text">Entrada</string>
+    <string name="outcome_text">Saida</string>
 </resources>

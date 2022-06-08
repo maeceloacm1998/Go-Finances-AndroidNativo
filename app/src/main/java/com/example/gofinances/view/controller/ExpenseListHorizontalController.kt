@@ -5,6 +5,7 @@ import com.airbnb.epoxy.EpoxyController
 import com.example.gofinances.constants.GoFinancesConstants
 import com.example.gofinances.provider.ExpenseProvider
 import com.example.gofinances.service.local.entity.ExpenseEntity
+import com.example.gofinances.view.holder.expenseItemHorizontalHolder
 import com.example.gofinances.view.model.ExpenseTotalModel
 
 class ExpenseListHorizontalController : EpoxyController() {
@@ -12,7 +13,28 @@ class ExpenseListHorizontalController : EpoxyController() {
     private lateinit var context: Context
 
     override fun buildModels() {
-        TODO("Not yet implemented")
+        val s = ""
+        mExpenseTotalList[0].let { item ->
+            expenseItemHorizontalHolder {
+                id(item.priceTotal)
+                type(item.type)
+                iconType(item.iconType)
+                lastDate(item.lastDate)
+                price(item.priceTotal)
+                context(context)
+            }
+        }
+
+        mExpenseTotalList[1].let { item ->
+            expenseItemHorizontalHolder {
+                id(item.priceTotal)
+                type(item.type)
+                iconType(item.iconType)
+                lastDate(item.lastDate)
+                price(item.priceTotal)
+                context(context)
+            }
+        }
     }
 
     fun setData() {
@@ -25,6 +47,7 @@ class ExpenseListHorizontalController : EpoxyController() {
         mExpenseTotalList.add(
             ExpenseTotalModel(
                 GoFinancesConstants.IncomeAndOutcomeValues.INCOME_VALUE,
+                GoFinancesConstants.IncomeAndOutcomeValues.INCOME_ICON_VALUE,
                 incomeTotal,
                 getLastIncomeDate
             )
@@ -33,12 +56,13 @@ class ExpenseListHorizontalController : EpoxyController() {
         mExpenseTotalList.add(
             ExpenseTotalModel(
                 GoFinancesConstants.IncomeAndOutcomeValues.OUTCOME_VALUE,
+                GoFinancesConstants.IncomeAndOutcomeValues.OUTCOME_ICON_VALUE,
                 outcomeTotal,
                 getLastOutcomeDate
             )
         )
 
-//        requestModelBuild()
+        requestModelBuild()
     }
 
     private fun getTotalPerType(type: String): Float {
@@ -64,7 +88,6 @@ class ExpenseListHorizontalController : EpoxyController() {
                 idReference = it.id
             }
         }
-        val s =""
         return getTypeList.find { it.id == idReference }?.dtCreated ?: 0
     }
 

@@ -1,5 +1,7 @@
 package com.example.gofinances.constants
 
+import com.example.gofinances.R
+
 class GoFinancesConstants {
     object SharedPreferences {
         const val CATEGORY_SELECTED = "item_selected"
@@ -9,6 +11,8 @@ class GoFinancesConstants {
     object IncomeAndOutcomeValues {
         const val INCOME_VALUE = "income"
         const val OUTCOME_VALUE = "outcome"
+        const val INCOME_ICON_VALUE = R.drawable.ic_arrow_up
+        const val OUTCOME_ICON_VALUE = R.drawable.ic_arrow_down
     }
 
     object RegisterExpense {
@@ -27,6 +31,7 @@ class GoFinancesConstants {
 
     object FormatDate {
         const val SIMPLE_DATE = "dd/MM/yyyy"
+        const val DATE_IN_FULL = "dd 'de' MMMM"
     }
 
 }
