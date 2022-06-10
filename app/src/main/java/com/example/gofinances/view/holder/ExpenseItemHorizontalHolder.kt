@@ -27,6 +27,9 @@ abstract class ExpenseItemHorizontalHolder :
     lateinit var type: String
 
     @EpoxyAttribute
+    lateinit var intervalDate: String
+
+    @EpoxyAttribute
     var iconType: Int = 0
 
     @EpoxyAttribute
@@ -34,6 +37,8 @@ abstract class ExpenseItemHorizontalHolder :
 
     @EpoxyAttribute
     var lastDate: Long = 0
+
+
 
     override fun bind(holder: SectionHolder) {
         setType(holder)

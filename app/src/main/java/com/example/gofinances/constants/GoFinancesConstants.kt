@@ -11,8 +11,10 @@ class GoFinancesConstants {
     object IncomeAndOutcomeValues {
         const val INCOME_VALUE = "income"
         const val OUTCOME_VALUE = "outcome"
+        const val TOTAL_VALUE = "total"
         const val INCOME_ICON_VALUE = R.drawable.ic_arrow_up
         const val OUTCOME_ICON_VALUE = R.drawable.ic_arrow_down
+        const val TOTAL_ICON_VALUE = R.drawable.ic_dolar
     }
 
     object RegisterExpense {
@@ -32,6 +34,7 @@ class GoFinancesConstants {
     object FormatDate {
         const val SIMPLE_DATE = "dd/MM/yyyy"
         const val DATE_IN_FULL = "dd 'de' MMMM"
+        const val DAY = "dd"
     }
 
 }
